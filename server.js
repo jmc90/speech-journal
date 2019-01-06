@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(express.static(path.join(__dirname, "client", "build")))
-app.use('/api', expressJwt({secret: secret}))
+app.use('/api', expressJwt({secret: process.env.SECRET}))
 
 app.use('/auth', require('./routes/auth'))
 app.use('/api/entry', require('./routes/entry'))
