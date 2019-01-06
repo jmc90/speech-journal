@@ -8,18 +8,16 @@ const path = require("path")
 
 const PORT = process.env.PORT || 8000
 
-
-
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(express.static(path.join(__dirname, "client", "build")))
-app.use('/api', expressJwt({secret: process.env.SECRET}))
+app.use('/api', expressJwt({secret: secret}))
 
 app.use('/auth', require('./routes/auth'))
 app.use('/api/entry', require('./routes/entry'))
 
 
-mongoose.connect(
+mongoose.connect(process.env.MONGODB_URI ||
   'mongodb://localhost:27017/speech-journal', 
   {useNewUrlParser: true},
   () => console.log(`Connected to the DB!`)
