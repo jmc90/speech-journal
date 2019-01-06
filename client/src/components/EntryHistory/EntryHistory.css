@@ -1,0 +1,39 @@
+/* EntryHistory.js */
+.entries-container {
+  height: 75vh;
+  overflow-y: auto;
+}
+
+/* EntryDiv.js */
+.entry-div {
+  width: 70%;
+  margin: auto;
+  
+}
+
+.word-wrap{
+  word-break: break-word;
+}
+
+.icon{
+  transition: color 0.2s ease-in-out;
+  color: red;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+.icon:active {
+  transform: translateY(4px);
+}
+
+/*Entry.js*/
+.entry {
+  width: 70%;
+  margin: auto;
+  background-color: #fff;
+  height: 75vh;
+  overflow-y: auto;
+}

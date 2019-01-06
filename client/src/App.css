@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;  
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./images/journal.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.page { 
+  min-height: 85vh;
+}
+
+.register-signin {
+  width: 300px;
+  padding: 20px;
+  color: white;
+}
