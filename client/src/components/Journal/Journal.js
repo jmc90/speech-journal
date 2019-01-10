@@ -35,7 +35,7 @@ class Journal extends Component {
       title: this.state.title,
       content: this.state.content
     }
-    this.props.addEntry(newEntry, this.props.user._id)
+    this.props.addEntry(newEntry)
     this.setState({
       title: '',
       content: ''
